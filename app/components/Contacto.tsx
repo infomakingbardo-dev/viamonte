@@ -26,7 +26,7 @@ export default function Contacto() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#c9a96e] text-[#0d0d0b] font-medium rounded-sm hover:bg-[#b8924a] transition-colors duration-200"
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[#7F1114] text-[#F0E6D3] text-base font-medium rounded-sm hover:bg-[#9a1518] transition-colors duration-200"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path

@@ -22,13 +22,15 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0d0d0b]/95 backdrop-blur-sm border-b border-[#2a2926]" : ""
+        scrolled
+          ? "bg-[#F0E6D3]/95 backdrop-blur-sm border-b border-[#c9b89a]"
+          : ""
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a
           href="#"
-          className="font-[family-name:var(--font-dm-serif)] text-xl text-[#f0ede8] tracking-wide"
+          className="font-[family-name:var(--font-dm-serif)] text-xl text-[#372010] tracking-wide"
         >
           Encuadre
         </a>
@@ -39,7 +41,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm text-[#6b6860] hover:text-[#f0ede8] transition-colors duration-200 tracking-wide"
+              className="text-sm text-[#7a5c3a] hover:text-[#372010] transition-colors duration-200 tracking-wide"
             >
               {l.label}
             </a>
@@ -48,40 +50,34 @@ export default function Navbar() {
 
         <a
           href="#contacto"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm border border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#0d0d0b] transition-all duration-200 rounded-sm font-medium"
+          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-sm border border-[#7F1114] text-[#7F1114] hover:bg-[#7F1114] hover:text-[#F0E6D3] transition-all duration-200 rounded-sm font-medium"
         >
           Reservar
         </a>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-[#f0ede8] p-1"
+          className="md:hidden text-[#372010] p-1"
           onClick={() => setOpen(!open)}
           aria-label="Menú"
         >
           <div className="w-5 space-y-1.5">
-            <span
-              className={`block h-px bg-current transition-all duration-200 ${open ? "rotate-45 translate-y-2" : ""}`}
-            />
-            <span
-              className={`block h-px bg-current transition-all duration-200 ${open ? "opacity-0" : ""}`}
-            />
-            <span
-              className={`block h-px bg-current transition-all duration-200 ${open ? "-rotate-45 -translate-y-2" : ""}`}
-            />
+            <span className={`block h-px bg-current transition-all duration-200 ${open ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block h-px bg-current transition-all duration-200 ${open ? "opacity-0" : ""}`} />
+            <span className={`block h-px bg-current transition-all duration-200 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
           </div>
         </button>
       </div>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#0d0d0b] border-t border-[#2a2926] px-6 py-6 flex flex-col gap-5">
+        <div className="md:hidden bg-[#F0E6D3] border-t border-[#c9b89a] px-6 py-6 flex flex-col gap-5">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-[#f0ede8] text-base"
+              className="text-[#372010] text-base"
             >
               {l.label}
             </a>
@@ -89,7 +85,7 @@ export default function Navbar() {
           <a
             href="#contacto"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex justify-center px-4 py-2.5 border border-[#c9a96e] text-[#c9a96e] text-sm font-medium rounded-sm"
+            className="mt-2 inline-flex justify-center px-4 py-3 border border-[#7F1114] text-[#7F1114] text-sm font-medium rounded-sm"
           >
             Reservar
           </a>
