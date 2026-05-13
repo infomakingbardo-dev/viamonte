@@ -13,23 +13,24 @@ export default function ElEspacio() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div>
-            <p className="text-[#00422E] text-xs tracking-[0.2em] uppercase font-medium mb-4">
+            <p className="text-[#c9a96e] text-xs tracking-[0.2em] uppercase font-medium mb-4">
               El espacio
             </p>
-            <h2 className="font-canela uppercase text-5xl md:text-7xl text-[#f0ede8] leading-[0.9] tracking-tight">
+            <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-6xl text-[#f0ede8] leading-tight">
               Un estudio pensado
               <br />
               para producir.
             </h2>
           </div>
           <p className="text-[#6b6860] text-sm leading-relaxed max-w-xs md:text-right">
-            Cada rincón fue pensado para adaptarse a producciones
+            Cada rincón del espacio fue pensado para adaptarse a producciones
             audiovisuales, sesiones de fotos y contenidos creativos.
           </p>
         </div>
 
         {/* Image placeholder grid */}
         <div className="grid grid-cols-12 gap-3 mb-20">
+          {/* Main large image */}
           <div className="col-span-12 md:col-span-8 h-96 md:h-[520px] bg-[#151512] rounded-sm border border-[#2a2926] flex items-center justify-center">
             <div className="text-center">
               <div className="w-10 h-10 border border-[#2a2926] rounded-full flex items-center justify-center mx-auto mb-3">
@@ -41,6 +42,8 @@ export default function ElEspacio() {
               <p className="text-[#3a3835] text-xs">Salón principal + patio</p>
             </div>
           </div>
+
+          {/* Side images */}
           <div className="col-span-12 md:col-span-4 flex flex-row md:flex-col gap-3">
             <div className="flex-1 h-48 md:h-auto bg-[#151512] rounded-sm border border-[#2a2926] flex items-center justify-center">
               <p className="text-[#3a3835] text-xs">Living + galería</p>
@@ -55,7 +58,7 @@ export default function ElEspacio() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#2a2926]">
           {stats.map(({ value, label }) => (
             <div key={label} className="bg-[#0d0d0b] p-8 text-center">
-              <p className="font-canela uppercase text-4xl text-[#f0ede8] mb-1 tracking-tight">
+              <p className="font-[family-name:var(--font-dm-serif)] text-4xl text-[#f0ede8] mb-1">
                 {value}
               </p>
               <p className="text-[#6b6860] text-xs tracking-widest uppercase">

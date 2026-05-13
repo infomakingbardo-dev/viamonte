@@ -26,8 +26,11 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="font-canela uppercase text-xl tracking-widest text-[#f0ede8]">
-          Frame Estudio
+        <a
+          href="#"
+          className="font-[family-name:var(--font-dm-serif)] text-xl text-[#f0ede8] tracking-wide"
+        >
+          Encuadre
         </a>
 
         {/* Desktop nav */}
@@ -45,7 +48,7 @@ export default function Navbar() {
 
         <a
           href="#contacto"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm border border-[#7F1114] text-[#7F1114] hover:bg-[#7F1114] hover:text-[#f0ede8] transition-all duration-200 rounded-sm font-medium"
+          className="hidden md:inline-flex items-center gap-2 px-4 py-2 text-sm border border-[#c9a96e] text-[#c9a96e] hover:bg-[#c9a96e] hover:text-[#0d0d0b] transition-all duration-200 rounded-sm font-medium"
         >
           Reservar
         </a>
@@ -57,9 +60,15 @@ export default function Navbar() {
           aria-label="Menú"
         >
           <div className="w-5 space-y-1.5">
-            <span className={`block h-px bg-current transition-all duration-200 ${open ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block h-px bg-current transition-all duration-200 ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-px bg-current transition-all duration-200 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span
+              className={`block h-px bg-current transition-all duration-200 ${open ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block h-px bg-current transition-all duration-200 ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block h-px bg-current transition-all duration-200 ${open ? "-rotate-45 -translate-y-2" : ""}`}
+            />
           </div>
         </button>
       </div>
@@ -80,7 +89,7 @@ export default function Navbar() {
           <a
             href="#contacto"
             onClick={() => setOpen(false)}
-            className="mt-2 inline-flex justify-center px-4 py-2.5 border border-[#7F1114] text-[#7F1114] text-sm font-medium rounded-sm"
+            className="mt-2 inline-flex justify-center px-4 py-2.5 border border-[#c9a96e] text-[#c9a96e] text-sm font-medium rounded-sm"
           >
             Reservar
           </a>
