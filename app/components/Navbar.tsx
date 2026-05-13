@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const links = [
   { label: "El espacio", href: "#espacio" },
@@ -11,21 +12,15 @@ const links = [
 
 function Logo() {
   return (
-    <a href="#" className="flex flex-col items-start leading-none select-none">
-      {/* ENCUADRE con bracket top-left y bottom-right */}
-      <div className="relative pl-3 pr-3 pt-1.5 pb-1">
-        {/* Top-left bracket */}
-        <span className="absolute top-0 left-0 w-3.5 h-3.5 border-t-[2px] border-l-[2px] border-[#372010]" />
-        {/* Bottom-right bracket */}
-        <span className="absolute bottom-0 right-0 w-3.5 h-3.5 border-b-[2px] border-r-[2px] border-[#372010]" />
-        <span className="block font-[family-name:var(--font-dm-serif)] text-[22px] tracking-[0.08em] text-[#372010] uppercase leading-none">
-          Encuadre
-        </span>
-      </div>
-      {/* Studio solapado hacia abajo-derecha */}
-      <span className="font-dellamor text-[#00422E] -mt-0.5 ml-5" style={{ fontSize: "28px", lineHeight: 1 }}>
-        Studio
-      </span>
+    <a href="#" className="select-none">
+      <Image
+        src="/logo.png"
+        alt="Encuadre Studio"
+        width={180}
+        height={80}
+        className="h-14 w-auto"
+        priority
+      />
     </a>
   );
 }
