@@ -1,15 +1,15 @@
 import CalculadoraTarifas from "./CalculadoraTarifas";
 
 const filas = [
-  { espacio: "Living de ingreso + Galería", h1: "86.000", h2: "154.800", h3: "219.300", h4: "275.200", h5: "322.500" },
-  { espacio: "Salón principal + Patio",     h1: "86.000", h2: "154.800", h3: "219.300", h4: "275.200", h5: "322.500" },
-  { espacio: "Habitación privada",          h1: "46.000", h2: "82.800",  h3: "117.300", h4: "147.200", h5: "172.500" },
-  { espacio: "Habitación con baño",         h1: "63.500", h2: "114.300", h3: "161.925", h4: "203.200", h5: "238.125" },
+  { espacio: "Living de ingreso + Galería", h1: "86.000", h2: "172.000", h3: "219.300", h4: "275.200", h5: "322.500" },
+  { espacio: "Salón principal + Patio",     h1: "86.000", h2: "172.000", h3: "219.300", h4: "275.200", h5: "322.500" },
+  { espacio: "Habitación privada",          h1: "46.000", h2: "92.000",  h3: "117.300", h4: "147.200", h5: "172.500" },
+  { espacio: "Habitación con baño",         h1: "63.500", h2: "127.000", h3: "161.925", h4: "203.200", h5: "238.125" },
 ];
 
 const descuentos = [
   { horas: "1 hora",  desc: null },
-  { horas: "2 horas", desc: "10% OFF" },
+  { horas: "2 horas", desc: null },
   { horas: "3 horas", desc: "15% OFF" },
   { horas: "4 horas", desc: "20% OFF" },
   { horas: "5 horas", desc: "25% OFF" },
@@ -25,7 +25,7 @@ export default function Tarifas() {
             Tarifas
           </p>
           <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-5xl text-[#372010]">
-            Precios claros,
+            Precios claros
             <br />
             sin sorpresas.
           </h2>
@@ -36,7 +36,7 @@ export default function Tarifas() {
 
         {/* Discount badges */}
         <div className="flex flex-wrap gap-3 mb-8">
-          {descuentos.filter(d => d.desc).map(d => (
+          {descuentos.filter(d => d.desc !== null).map(d => (
             <span key={d.horas} className="inline-flex items-center gap-2 px-4 py-2 bg-[#00422E] text-[#7dbf9e] text-sm rounded-sm">
               <span className="text-[#F0E6D3] font-medium">{d.horas}</span>
               <span>{d.desc}</span>
@@ -101,6 +101,29 @@ export default function Tarifas() {
         <p className="mt-4 text-[#c9b89a] text-xs">* Precios en pesos argentinos. El pago se realiza en forma anticipada.</p>
 
         <CalculadoraTarifas />
+
+        {/* +5hs card */}
+        <a
+          href="https://wa.me/5491155058300?text=Hola%2C%20necesito%20m%C3%A1s%20de%205%20horas%20en%20Encuadre%20Studio.%20%C2%BFPodr%C3%ADan%20darme%20un%20presupuesto%3F"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#372010] rounded-sm p-7 hover:bg-[#4a2a14] transition-colors duration-200 group"
+        >
+          <div>
+            <p className="font-[family-name:var(--font-dm-serif)] text-[#F0E6D3] text-2xl mb-1">
+              ¿Necesitás más de 5 horas?
+            </p>
+            <p className="text-[#c9a96e]" style={{ fontSize: "20px" }}>
+              Armamos un precio a medida para producciones largas.
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-2 px-6 py-3 bg-[#00422E] text-[#F0E6D3] text-sm font-medium rounded-sm group-hover:bg-[#005a3e] transition-colors whitespace-nowrap">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9c0 1.35.36 2.61.99 3.69L1.5 16.5l3.93-1.02A7.46 7.46 0 009 16.5c4.14 0 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5z" stroke="currentColor" strokeWidth="1.2" fill="none"/>
+            </svg>
+            Hablanos
+          </span>
+        </a>
       </div>
     </section>
   );

@@ -11,7 +11,7 @@ const espacios = [
 
 const descuentos: Record<number, number> = {
   1: 0,
-  2: 0.10,
+  2: 0,
   3: 0.15,
   4: 0.20,
   5: 0.25,
@@ -79,7 +79,7 @@ export default function CalculadoraTarifas() {
 
           {/* Descuentos info */}
           <div className="space-y-1.5">
-            {[2, 3, 4, 5].map((h) => (
+            {[3, 4, 5].map((h) => (
               <div key={h} className={`flex justify-between text-sm py-1 border-b border-[#c9b89a] ${horas === h ? "text-[#372010] font-medium" : "text-[#7a5c3a]"}`}>
                 <span>{h} horas</span>
                 <span className={horas === h ? "text-[#00422E] font-semibold" : ""}>{descuentos[h] * 100}% OFF</span>
