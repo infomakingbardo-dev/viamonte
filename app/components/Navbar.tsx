@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#F0E6D3]/95 backdrop-blur-sm border-b border-[#c9b89a]" : ""
+        scrolled ? "bg-[#F7E6D9]/95 backdrop-blur-sm border-b border-[#c9b89a]" : "bg-[#F7E6D9]"
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
