@@ -104,7 +104,7 @@ export default function Espacios() {
         </div>
 
         <a
-          href="https://wa.me/5491155058300?text=Hola%2C%20me%20interesa%20alquilar%20el%20piso%20completo%20de%20Encuadre%20Studio.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+          href="https://api.whatsapp.com/send?phone=+5491155058300&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20estudio"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#F0E6D3] rounded-sm p-7 hover:bg-[#e8d9c0] transition-colors duration-200 group"

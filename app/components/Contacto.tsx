@@ -1,6 +1,6 @@
 export default function Contacto() {
   const whatsappUrl =
-    "https://wa.me/5491155058300?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20disponibilidad%20en%20Encuadre%20Studio.";
+    "https://api.whatsapp.com/send?phone=+5491155058300&text=Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20estudio";
 
   return (
     <section id="contacto" className="py-28 px-6 bg-[#F0E6D3]">
