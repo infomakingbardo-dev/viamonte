@@ -14,7 +14,7 @@ function Logo() {
   return (
     <a href="#" className="select-none">
       <Image
-        src="/logo.png"
+        src="/logo web.png"
         alt="Encuadre Studio"
         width={180}
         height={80}
