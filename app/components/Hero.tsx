@@ -11,8 +11,10 @@ export default function Hero() {
         </p>
 
         {/* Heading */}
-        <h1 className="font-[family-name:var(--font-dm-serif)] text-6xl md:text-8xl lg:text-9xl text-[#372010] leading-[0.92] mb-10">
-          El <span className="font-dellamor">encuadre perfecto</span>
+        <h1 className="font-[family-name:var(--font-dm-serif)] text-6xl md:text-8xl lg:text-9xl text-[#372010] leading-[0.78] mb-10">
+          El encuadre
+          <br />
+          <span className="font-dellamor" style={{ fontSize: "188px", lineHeight: 1 }}>perfecto</span>
           <br />
           para tu marca.
         </h1>
