@@ -57,7 +57,7 @@ export default function Contacto() {
                 <circle cx="7" cy="7" r="2.5" stroke="currentColor" strokeWidth="1"/>
                 <circle cx="10.5" cy="3.5" r="0.5" fill="currentColor"/>
               </svg>
-              @encuadre.studio
+              Fotografía & Video
             </a>
             <p className="text-[#7a5c3a]" style={{ fontSize: "20px" }}>Instagram</p>
           </div>
