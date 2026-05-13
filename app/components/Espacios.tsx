@@ -111,10 +111,10 @@ export default function Espacios() {
         >
           <div>
             <p className="font-[family-name:var(--font-dm-serif)] text-[#372010] text-2xl mb-1">
-              ¿Querés alquilar el piso completo?
+              ¿Querés alquilar todo el piso?
             </p>
             <p className="text-[#7a5c3a]" style={{ fontSize: "20px" }}>
-              Todos los ambientes disponibles para vos. Hablámoslo por WhatsApp.
+              Si querés usar todos los ambientes en simultáneo, hablanos por WhatsApp.
             </p>
           </div>
           <span className="inline-flex items-center gap-2 px-6 py-3 bg-[#00422E] text-[#F0E6D3] text-sm font-medium rounded-sm group-hover:bg-[#005a3e] transition-colors whitespace-nowrap">
