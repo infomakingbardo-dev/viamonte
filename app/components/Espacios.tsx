@@ -102,6 +102,28 @@ export default function Espacios() {
             $46.000 <span className="text-[#7dbf9e] text-sm font-normal">/ hora</span>
           </p>
         </div>
+
+        <a
+          href="https://wa.me/5491155058300?text=Hola%2C%20me%20interesa%20alquilar%20el%20piso%20completo%20de%20Encuadre%20Studio.%20%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#F0E6D3] rounded-sm p-7 hover:bg-[#e8d9c0] transition-colors duration-200 group"
+        >
+          <div>
+            <p className="font-[family-name:var(--font-dm-serif)] text-[#372010] text-2xl mb-1">
+              ¿Querés alquilar el piso completo?
+            </p>
+            <p className="text-[#7a5c3a]" style={{ fontSize: "20px" }}>
+              Todos los ambientes disponibles para vos. Hablámoslo por WhatsApp.
+            </p>
+          </div>
+          <span className="inline-flex items-center gap-2 px-6 py-3 bg-[#00422E] text-[#F0E6D3] text-sm font-medium rounded-sm group-hover:bg-[#005a3e] transition-colors whitespace-nowrap">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9c0 1.35.36 2.61.99 3.69L1.5 16.5l3.93-1.02A7.46 7.46 0 009 16.5c4.14 0 7.5-3.36 7.5-7.5S13.14 1.5 9 1.5z" stroke="currentColor" strokeWidth="1.2" fill="none"/>
+            </svg>
+            Hablanos
+          </span>
+        </a>
       </div>
     </section>
   );
