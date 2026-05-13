@@ -1,6 +1,6 @@
 export default function Contacto() {
   const whatsappUrl =
-    "https://wa.me/5491154118353?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20disponibilidad%20en%20Encuadre.";
+    "https://wa.me/5491154118353?text=Hola%2C%20quiero%20hacer%20una%20consulta%20sobre%20disponibilidad%20en%20Frame%20Estudio.";
 
   return (
     <section id="contacto" className="py-28 px-6 border-t border-[#2a2926]">
@@ -8,14 +8,13 @@ export default function Contacto() {
 
         {/* CTA banner */}
         <div className="relative overflow-hidden bg-[#151512] border border-[#2a2926] rounded-sm p-12 md:p-20 mb-16 text-center">
-          {/* Decorative */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-[#c9a96e] to-transparent" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-t from-[#c9a96e] to-transparent" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-b from-[#7F1114] to-transparent" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-12 bg-gradient-to-t from-[#7F1114] to-transparent" />
 
-          <p className="text-[#c9a96e] text-xs tracking-[0.2em] uppercase font-medium mb-6">
+          <p className="text-[#00422E] text-xs tracking-[0.2em] uppercase font-medium mb-6">
             ¿Listo para reservar?
           </p>
-          <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-6xl text-[#f0ede8] mb-6">
+          <h2 className="font-canela uppercase text-5xl md:text-7xl text-[#f0ede8] mb-6 tracking-tight leading-[0.9]">
             Escribinos.
           </h2>
           <p className="text-[#6b6860] text-base max-w-sm mx-auto mb-10 leading-relaxed">
@@ -26,7 +25,7 @@ export default function Contacto() {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-[#c9a96e] text-[#0d0d0b] font-medium rounded-sm hover:bg-[#b8924a] transition-colors duration-200"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-[#7F1114] text-[#f0ede8] font-medium rounded-sm hover:bg-[#9a1518] transition-colors duration-200"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path
@@ -42,7 +41,7 @@ export default function Contacto() {
                 strokeLinecap="round"
               />
             </svg>
-            Escribir por WhatsApp
+            Reservá tu frame
           </a>
         </div>
 
@@ -57,7 +56,7 @@ export default function Contacto() {
             <p className="text-[#6b6860] text-xs tracking-widest uppercase mb-3">Teléfono</p>
             <a
               href="tel:+5491154118353"
-              className="text-[#f0ede8] text-sm font-medium hover:text-[#c9a96e] transition-colors"
+              className="text-[#f0ede8] text-sm font-medium hover:text-[#7F1114] transition-colors"
             >
               +54 9 11 5411-8353
             </a>
@@ -67,14 +66,14 @@ export default function Contacto() {
             <p className="text-[#6b6860] text-xs tracking-widest uppercase mb-3">Redes</p>
             <a
               href="#"
-              className="text-[#f0ede8] text-sm font-medium hover:text-[#c9a96e] transition-colors flex items-center gap-2"
+              className="text-[#f0ede8] text-sm font-medium hover:text-[#7F1114] transition-colors flex items-center gap-2"
             >
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <rect x="1" y="1" width="12" height="12" rx="3" stroke="currentColor" strokeWidth="1"/>
                 <circle cx="7" cy="7" r="2.5" stroke="currentColor" strokeWidth="1"/>
                 <circle cx="10.5" cy="3.5" r="0.5" fill="currentColor"/>
               </svg>
-              @encuadre.ba
+              @frameestudio.ba
             </a>
             <p className="text-[#6b6860] text-sm mt-1">Instagram</p>
           </div>

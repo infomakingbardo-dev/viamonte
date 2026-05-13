@@ -44,10 +44,10 @@ export default function Espacios() {
 
         {/* Header */}
         <div className="mb-16">
-          <p className="text-[#c9a96e] text-xs tracking-[0.2em] uppercase font-medium mb-4">
+          <p className="text-[#00422E] text-xs tracking-[0.2em] uppercase font-medium mb-4">
             Espacios disponibles
           </p>
-          <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-5xl text-[#f0ede8]">
+          <h2 className="font-canela uppercase text-5xl md:text-6xl text-[#f0ede8] tracking-tight leading-[0.9]">
             Elegí tu ambiente.
           </h2>
         </div>
@@ -60,11 +60,11 @@ export default function Espacios() {
               className="bg-[#0d0d0b] p-8 md:p-10 group hover:bg-[#151512] transition-colors duration-300"
             >
               <div className="flex items-start justify-between mb-6">
-                <span className="text-[#2a2926] text-5xl font-[family-name:var(--font-dm-serif)] leading-none group-hover:text-[#3a3835] transition-colors duration-300">
+                <span className="font-canela uppercase text-5xl text-[#2a2926] leading-none group-hover:text-[#3a3835] transition-colors duration-300">
                   {e.numero}
                 </span>
                 <div className="flex flex-col items-end gap-2">
-                  <span className="text-xs px-2.5 py-1 border border-[#2a2926] text-[#6b6860] rounded-sm">
+                  <span className="text-xs px-2.5 py-1 border border-[#00422E]/40 text-[#00422E] rounded-sm">
                     {e.tag}
                   </span>
                   <span className="text-xs text-[#3a3835]">{e.reserva}</span>
@@ -88,7 +88,7 @@ export default function Espacios() {
                 </div>
                 <a
                   href="#contacto"
-                  className="text-xs text-[#c9a96e] hover:underline flex items-center gap-1.5"
+                  className="text-xs text-[#7F1114] hover:underline flex items-center gap-1.5"
                 >
                   Reservar
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
@@ -108,7 +108,7 @@ export default function Espacios() {
               Adicional disponible para complementar cualquier reserva
             </p>
           </div>
-          <p className="text-[#c9a96e] font-medium whitespace-nowrap">
+          <p className="text-[#7F1114] font-medium whitespace-nowrap">
             $46.000 <span className="text-[#6b6860] text-sm font-normal">/ hora</span>
           </p>
         </div>

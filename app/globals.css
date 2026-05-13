@@ -1,18 +1,39 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Canela Condensed';
+  src: url('/fonts/CanelaCondensed-Regular.woff2') format('woff2'),
+       url('/fonts/CanelaCondensed-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Canela Condensed';
+  src: url('/fonts/CanelaCondensed-Light.woff2') format('woff2'),
+       url('/fonts/CanelaCondensed-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #0d0d0b;
   --foreground: #f0ede8;
-  --accent: #c9a96e;
+  --accent: #7F1114;
+  --accent-green: #00422E;
   --muted: #6b6860;
   --border: #2a2926;
   --card: #151512;
+  --font-canela: 'Canela Condensed', 'Bodoni MT Condensed', 'Book Antiqua', Georgia, serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
+  --color-accent-green: var(--accent-green);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-card: var(--card);
@@ -33,7 +54,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.font-canela {
+  font-family: var(--font-canela);
+}
+
 ::selection {
   background: var(--accent);
-  color: var(--background);
+  color: var(--foreground);
 }

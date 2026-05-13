@@ -15,9 +15,9 @@ const dmSerif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Encuadre — Estudio en Buenos Aires",
+  title: "Frame Estudio — Buenos Aires",
   description:
-    "Espacio para producciones audiovisuales en el corazón de Buenos Aires. Luz natural, ambientado, flexible.",
+    "Estudio para producciones audiovisuales en el corazón de Buenos Aires. Luz natural, ambientado, flexible.",
 };
 
 export default function RootLayout({
