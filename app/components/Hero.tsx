@@ -13,7 +13,7 @@ export default function Hero() {
         {/* Heading */}
         <h1 className="text-[#372010] mb-10">
           <span className="block font-[family-name:var(--font-dm-serif)] text-6xl md:text-8xl lg:text-9xl leading-none tracking-[-0.02em]">El encuadre</span>
-          <span className="block font-dellamor text-[#372010] leading-none -mt-3 -mb-3" style={{ fontSize: "188px" }}>perfecto</span>
+          <span className="block font-dellamor leading-none" style={{ fontSize: "188px", color: "#00422E", marginTop: "-48px", marginBottom: "-52px" }}>perfecto</span>
           <span className="block font-[family-name:var(--font-dm-serif)] text-6xl md:text-8xl lg:text-9xl leading-none tracking-[-0.02em]">para tu marca.</span>
         </h1>
 
