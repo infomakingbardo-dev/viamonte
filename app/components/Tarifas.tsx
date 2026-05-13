@@ -1,24 +1,18 @@
+import CalculadoraTarifas from "./CalculadoraTarifas";
+
 const filas = [
-  {
-    espacio: "Living de ingreso + Galería",
-    h1: "86.000", h2: "155.000", h3: "220.000", h4: "276.000",
-    highlight: false,
-  },
-  {
-    espacio: "Salón principal + Patio",
-    h1: "86.000", h2: "155.000", h3: "220.000", h4: "276.000",
-    highlight: false,
-  },
-  {
-    espacio: "Habitación privada",
-    h1: "46.000", h2: "83.000", h3: "117.000", h4: "147.000",
-    highlight: false,
-  },
-  {
-    espacio: "Habitación con baño",
-    h1: "63.500", h2: "114.000", h3: "161.000", h4: "202.000",
-    highlight: true,
-  },
+  { espacio: "Living de ingreso + Galería", h1: "86.000", h2: "154.800", h3: "219.300", h4: "275.200", h5: "322.500" },
+  { espacio: "Salón principal + Patio",     h1: "86.000", h2: "154.800", h3: "219.300", h4: "275.200", h5: "322.500" },
+  { espacio: "Habitación privada",          h1: "46.000", h2: "82.800",  h3: "117.300", h4: "147.200", h5: "172.500" },
+  { espacio: "Habitación con baño",         h1: "63.500", h2: "114.300", h3: "161.925", h4: "203.200", h5: "238.125" },
+];
+
+const descuentos = [
+  { horas: "1 hora",  desc: null },
+  { horas: "2 horas", desc: "10% OFF" },
+  { horas: "3 horas", desc: "15% OFF" },
+  { horas: "4 horas", desc: "20% OFF" },
+  { horas: "5 horas", desc: "25% OFF" },
 ];
 
 export default function Tarifas() {
@@ -26,9 +20,8 @@ export default function Tarifas() {
     <section id="tarifas" className="py-28 px-6 bg-[#F0E6D3]">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
         <div className="mb-16">
-          <p className="text-[#7a5c3a] text-xs tracking-[0.2em] uppercase font-medium mb-4">
+          <p className="text-[#7a5c3a] uppercase font-medium mb-4 tracking-[0.2em]" style={{ fontSize: "19px" }}>
             Tarifas
           </p>
           <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-5xl text-[#372010]">
@@ -36,6 +29,19 @@ export default function Tarifas() {
             <br />
             sin sorpresas.
           </h2>
+          <p className="text-[#7a5c3a] mt-4" style={{ fontSize: "20px" }}>
+            Cuanto más horas reservás, mayor es el descuento.
+          </p>
+        </div>
+
+        {/* Discount badges */}
+        <div className="flex flex-wrap gap-3 mb-8">
+          {descuentos.filter(d => d.desc).map(d => (
+            <span key={d.horas} className="inline-flex items-center gap-2 px-4 py-2 bg-[#00422E] text-[#7dbf9e] text-sm rounded-sm">
+              <span className="text-[#F0E6D3] font-medium">{d.horas}</span>
+              <span>{d.desc}</span>
+            </span>
+          ))}
         </div>
 
         {/* Desktop table */}
@@ -43,37 +49,30 @@ export default function Tarifas() {
           <table className="w-full">
             <thead>
               <tr className="border-b border-[#c9b89a] bg-[#e8d9c0]">
-                <th className="text-left px-6 py-4 text-[#7a5c3a] text-xs tracking-widest uppercase font-medium">
-                  Espacio
-                </th>
-                {["1 hora", "2 horas", "3 horas", "4 horas"].map((h) => (
-                  <th key={h} className="text-right px-6 py-4 text-[#7a5c3a] text-xs tracking-widest uppercase font-medium">
-                    {h}
+                <th className="text-left px-6 py-4 text-[#7a5c3a] text-xs tracking-widest uppercase font-medium">Espacio</th>
+                {descuentos.map(d => (
+                  <th key={d.horas} className="text-right px-4 py-4 text-[#7a5c3a] text-xs uppercase font-medium">
+                    <span className="block tracking-widest">{d.horas}</span>
+                    {d.desc && <span className="block text-[#00422E] font-semibold mt-0.5">{d.desc}</span>}
                   </th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {filas.map((f) => (
-                <tr
-                  key={f.espacio}
-                  className={`border-b border-[#c9b89a] last:border-b-0 ${
-                    f.highlight ? "bg-[#e8d9c0]" : ""
-                  } hover:bg-[#e8d9c0] transition-colors duration-150`}
-                >
+                <tr key={f.espacio} className="border-b border-[#c9b89a] last:border-b-0 hover:bg-[#e8d9c0] transition-colors duration-150">
                   <td className="px-6 py-5 text-[#372010] text-sm">{f.espacio}</td>
-                  <td className="px-6 py-5 text-right text-[#372010] text-sm tabular-nums">${f.h1}</td>
-                  <td className="px-6 py-5 text-right text-[#372010] text-sm tabular-nums">${f.h2}</td>
-                  <td className="px-6 py-5 text-right text-[#372010] text-sm tabular-nums">${f.h3}</td>
-                  <td className="px-6 py-5 text-right text-[#7F1114] text-sm tabular-nums font-semibold">${f.h4}</td>
+                  <td className="px-4 py-5 text-right text-[#372010] text-sm tabular-nums">${f.h1}</td>
+                  <td className="px-4 py-5 text-right text-[#372010] text-sm tabular-nums">${f.h2}</td>
+                  <td className="px-4 py-5 text-right text-[#372010] text-sm tabular-nums">${f.h3}</td>
+                  <td className="px-4 py-5 text-right text-[#372010] text-sm tabular-nums">${f.h4}</td>
+                  <td className="px-4 py-5 text-right text-[#7F1114] text-sm tabular-nums font-semibold">${f.h5}</td>
                 </tr>
               ))}
               <tr className="bg-[#e8d9c0]">
-                <td className="px-6 py-5 text-[#7a5c3a] text-sm">
-                  Cocina / Baño <span className="text-xs text-[#c9b89a]">(adicional)</span>
-                </td>
-                <td className="px-6 py-5 text-right text-[#7a5c3a] text-sm tabular-nums">$46.000</td>
-                <td colSpan={3} className="px-6 py-5 text-right text-[#c9b89a] text-xs">—</td>
+                <td className="px-6 py-5 text-[#7a5c3a] text-sm">Cocina / Baño <span className="text-xs text-[#c9b89a]">(adicional)</span></td>
+                <td className="px-4 py-5 text-right text-[#7a5c3a] text-sm tabular-nums">$46.000</td>
+                <td colSpan={4} className="px-4 py-5 text-right text-[#c9b89a] text-xs">—</td>
               </tr>
             </tbody>
           </table>
@@ -85,26 +84,23 @@ export default function Tarifas() {
             <div key={f.espacio} className="border border-[#c9b89a] rounded-sm p-5 bg-[#e8d9c0]">
               <p className="text-[#372010] text-sm font-medium mb-4">{f.espacio}</p>
               <div className="grid grid-cols-2 gap-3">
-                {[["1 hora", f.h1], ["2 horas", f.h2], ["3 horas", f.h3], ["4 horas", f.h4]].map(([label, val]) => (
-                  <div key={label}>
-                    <p className="text-[#c9b89a] text-xs mb-0.5">{label}</p>
+                {[["1 hora", f.h1, null], ["2 horas", f.h2, "10%"], ["3 horas", f.h3, "15%"], ["4 horas", f.h4, "20%"], ["5 horas", f.h5, "25%"]].map(([label, val, desc]) => (
+                  <div key={String(label)}>
+                    <div className="flex items-center gap-1.5 mb-0.5">
+                      <p className="text-[#c9b89a] text-xs">{label}</p>
+                      {desc && <span className="text-[#00422E] text-xs font-semibold">{desc} OFF</span>}
+                    </div>
                     <p className="text-[#372010] text-sm tabular-nums">${val}</p>
                   </div>
                 ))}
               </div>
             </div>
           ))}
-          <div className="border border-[#c9b89a] rounded-sm p-5">
-            <p className="text-[#7a5c3a] text-sm font-medium">
-              Cocina / Baño <span className="text-xs text-[#c9b89a]">(adicional)</span>
-            </p>
-            <p className="text-[#372010] text-sm mt-2">$46.000 / hora</p>
-          </div>
         </div>
 
-        <p className="mt-6 text-[#c9b89a] text-xs">
-          * Precios en pesos argentinos. El pago se realiza en forma anticipada.
-        </p>
+        <p className="mt-4 text-[#c9b89a] text-xs">* Precios en pesos argentinos. El pago se realiza en forma anticipada.</p>
+
+        <CalculadoraTarifas />
       </div>
     </section>
   );

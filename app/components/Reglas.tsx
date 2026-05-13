@@ -1,9 +1,9 @@
 const incluidos = [
   {
     icono: (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <circle cx="9" cy="9" r="7.5" stroke="#c9a96e" strokeWidth="1"/>
-        <path d="M6 9l2 2 4-4" stroke="#c9a96e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="11" cy="11" r="9" stroke="#00422E" strokeWidth="1.2"/>
+        <path d="M7 11l3 3 5-5" stroke="#00422E" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
     titulo: "Muebles y decoración",
@@ -11,8 +11,10 @@ const incluidos = [
   },
   {
     icono: (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <path d="M9 2v7M9 13v3M3 9H2M16 9h-3M5 5L4 4M14 14l-1-1M5 13l-1 1M14 4l-1 1" stroke="#c9a96e" strokeWidth="1.2" strokeLinecap="round"/>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="11" cy="11" r="9" stroke="#00422E" strokeWidth="1.2"/>
+        <path d="M11 4v7M11 15v2" stroke="#00422E" strokeWidth="1.4" strokeLinecap="round"/>
+        <path d="M7 7l1.5 1.5M13.5 13.5L15 15M4 11h2M16 11h2M7 15l1.5-1.5M13.5 8.5L15 7" stroke="#00422E" strokeWidth="1.2" strokeLinecap="round"/>
       </svg>
     ),
     titulo: "Luz natural",
@@ -20,10 +22,9 @@ const incluidos = [
   },
   {
     icono: (
-      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-        <rect x="2" y="5" width="14" height="9" rx="1" stroke="#c9a96e" strokeWidth="1"/>
-        <path d="M6 5V4a1 1 0 011-1h4a1 1 0 011 1v1" stroke="#c9a96e" strokeWidth="1"/>
-        <path d="M9 9.5v1M7 9.5h4" stroke="#c9a96e" strokeWidth="1.2" strokeLinecap="round"/>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+        <circle cx="11" cy="11" r="9" stroke="#00422E" strokeWidth="1.2"/>
+        <path d="M7 11h8M11 7v8" stroke="#00422E" strokeWidth="1.4" strokeLinecap="round"/>
       </svg>
     ),
     titulo: "Reserva flexible",
@@ -32,21 +33,9 @@ const incluidos = [
 ];
 
 const cancelacion = [
-  {
-    condicion: "Más de 72 hs antes",
-    estado: "Cancelación sin cargo",
-    color: "text-[#6b9b6b]",
-  },
-  {
-    condicion: "Menos de 72 hs antes",
-    estado: "Seña no reembolsable",
-    color: "text-[#9b6b6b]",
-  },
-  {
-    condicion: "Cambio de fecha",
-    estado: "Gratis con 48 hs de aviso",
-    color: "text-[#c9a96e]",
-  },
+  { condicion: "Más de 72 hs antes", estado: "Cancelación sin cargo", color: "text-[#00422E]" },
+  { condicion: "Menos de 72 hs antes", estado: "Seña no reembolsable", color: "text-[#7F1114]" },
+  { condicion: "Cambio de fecha", estado: "Gratis con 48 hs de aviso", color: "text-[#372010]" },
 ];
 
 const reglas = [
@@ -59,15 +48,14 @@ const reglas = [
 
 export default function Reglas() {
   return (
-    <section id="reglas" className="py-28 px-6 border-t border-[#2a2926]">
+    <section id="reglas" className="py-28 px-6 bg-[#F0E6D3]">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
         <div className="mb-16">
-          <p className="text-[#c9a96e] text-xs tracking-[0.2em] uppercase font-medium mb-4">
+          <p className="text-[#7a5c3a] uppercase font-medium mb-4 tracking-[0.2em]" style={{ fontSize: "19px" }}>
             Incluido & Reglas
           </p>
-          <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-5xl text-[#f0ede8]">
+          <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-5xl text-[#372010]">
             Todo lo que
             <br />
             necesitás saber.
@@ -76,18 +64,15 @@ export default function Reglas() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-          {/* Incluidos */}
           <div>
-            <p className="text-[#f0ede8] text-sm font-medium mb-8 uppercase tracking-widest">
-              Qué está incluido
-            </p>
+            <p className="text-[#372010] text-sm font-medium mb-8 uppercase tracking-widest">Qué está incluido</p>
             <div className="space-y-8">
               {incluidos.map((item) => (
                 <div key={item.titulo} className="flex gap-4">
                   <div className="mt-0.5 shrink-0">{item.icono}</div>
                   <div>
-                    <p className="text-[#f0ede8] text-sm font-medium mb-1.5">{item.titulo}</p>
-                    <p className="text-[#6b6860] text-sm leading-relaxed">{item.texto}</p>
+                    <p className="text-[#372010] font-medium mb-1.5" style={{ fontSize: "20px" }}>{item.titulo}</p>
+                    <p className="text-[#7a5c3a] leading-relaxed" style={{ fontSize: "20px" }}>{item.texto}</p>
                   </div>
                 </div>
               ))}
@@ -95,33 +80,24 @@ export default function Reglas() {
           </div>
 
           <div className="space-y-10">
-            {/* Política de cancelación */}
             <div>
-              <p className="text-[#f0ede8] text-sm font-medium mb-6 uppercase tracking-widest">
-                Política de cancelación
-              </p>
+              <p className="text-[#372010] text-sm font-medium mb-6 uppercase tracking-widest">Política de cancelación</p>
               <div className="space-y-3">
                 {cancelacion.map((c) => (
-                  <div
-                    key={c.condicion}
-                    className="flex items-center justify-between py-3 border-b border-[#2a2926]"
-                  >
-                    <p className="text-[#6b6860] text-sm">{c.condicion}</p>
-                    <p className={`text-sm font-medium ${c.color}`}>{c.estado}</p>
+                  <div key={c.condicion} className="flex items-center justify-between py-3 border-b border-[#c9b89a]">
+                    <p className="text-[#7a5c3a]" style={{ fontSize: "20px" }}>{c.condicion}</p>
+                    <p className={`font-medium ${c.color}`} style={{ fontSize: "20px" }}>{c.estado}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Reglas de uso */}
             <div>
-              <p className="text-[#f0ede8] text-sm font-medium mb-6 uppercase tracking-widest">
-                Reglas de uso
-              </p>
+              <p className="text-[#372010] text-sm font-medium mb-6 uppercase tracking-widest">Reglas de uso</p>
               <ul className="space-y-3">
                 {reglas.map((r) => (
-                  <li key={r} className="flex gap-3 text-[#6b6860] text-sm leading-relaxed">
-                    <span className="text-[#3a3835] mt-1 shrink-0">—</span>
+                  <li key={r} className="flex gap-3 text-[#7a5c3a] leading-relaxed" style={{ fontSize: "20px" }}>
+                    <span className="text-[#c9b89a] mt-1 shrink-0">—</span>
                     {r}
                   </li>
                 ))}

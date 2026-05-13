@@ -2,8 +2,7 @@ const espacios = [
   {
     numero: "01",
     nombre: "Living de ingreso + Galería",
-    descripcion:
-      "Espacio de entrada con galería abierta. Ideal para producciones que requieren circulación o un ambiente más dinámico y editorial.",
+    descripcion: "Espacio de entrada con galería abierta. Ideal para producciones que requieren circulación o un ambiente más dinámico y editorial.",
     desde: "86.000",
     tag: "Zona común",
     reserva: "Reserva directa",
@@ -11,8 +10,7 @@ const espacios = [
   {
     numero: "02",
     nombre: "Salón principal + Patio",
-    descripcion:
-      "El corazón del estudio. Un salón amplio que se abre al patio, con excelente luz natural y la mayor flexibilidad para escenas y producciones.",
+    descripcion: "El corazón del estudio. Un salón amplio que se abre al patio, con excelente luz natural y la mayor flexibilidad para escenas y producciones.",
     desde: "86.000",
     tag: "Zona común",
     reserva: "Reserva directa",
@@ -20,8 +18,7 @@ const espacios = [
   {
     numero: "03",
     nombre: "Habitación privada",
-    descripcion:
-      "Espacios íntimos y controlados, perfectos para sesiones de retrato, contenido de marca o grabaciones que requieren privacidad.",
+    descripcion: "Espacios íntimos y controlados, perfectos para sesiones de retrato, contenido de marca o grabaciones que requieren privacidad.",
     desde: "46.000",
     tag: "Privada",
     reserva: "Requiere confirmación",
@@ -29,8 +26,7 @@ const espacios = [
   {
     numero: "04",
     nombre: "Habitación con baño",
-    descripcion:
-      "Habitación privada con baño propio. Mayor autonomía para el equipo y los talentos durante la producción.",
+    descripcion: "Habitación privada con baño propio. Mayor autonomía para el equipo y los talentos durante la producción.",
     desde: "63.500",
     tag: "Privada",
     reserva: "Requiere confirmación",
@@ -42,9 +38,8 @@ export default function Espacios() {
     <section id="espacios" className="py-28 px-6 bg-[#00422E]">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
         <div className="mb-16">
-          <p className="text-[#7dbf9e] text-xs tracking-[0.2em] uppercase font-medium mb-4">
+          <p className="text-[#7dbf9e] uppercase font-medium mb-4 tracking-[0.2em]" style={{ fontSize: "19px" }}>
             Espacios disponibles
           </p>
           <h2 className="font-[family-name:var(--font-dm-serif)] text-4xl md:text-5xl text-[#F0E6D3]">
@@ -52,15 +47,14 @@ export default function Espacios() {
           </h2>
         </div>
 
-        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#005a3e]">
           {espacios.map((e) => (
-            <article
-              key={e.numero}
-              className="bg-[#00422E] p-8 md:p-10 group hover:bg-[#003824] transition-colors duration-300"
-            >
+            <article key={e.numero} className="bg-[#00422E] p-8 md:p-10 group hover:bg-[#003824] transition-colors duration-300">
               <div className="flex items-start justify-between mb-6">
-                <span className="text-[#005a3e] text-5xl font-[family-name:var(--font-dm-serif)] leading-none group-hover:text-[#006b4a] transition-colors duration-300">
+                <span
+                  className="font-[family-name:var(--font-dm-serif)] leading-none text-[#F0E6D3]/20 group-hover:text-[#F0E6D3]/30 transition-colors duration-300"
+                  style={{ fontSize: "72px" }}
+                >
                   {e.numero}
                 </span>
                 <div className="flex flex-col items-end gap-2">
@@ -71,25 +65,24 @@ export default function Espacios() {
                 </div>
               </div>
 
-              <h3 className="text-[#F0E6D3] text-xl font-medium mb-3 leading-snug">
+              <h3
+                className="font-[family-name:var(--font-dm-serif)] text-[#F0E6D3] mb-4 leading-snug"
+                style={{ fontSize: "30px" }}
+              >
                 {e.nombre}
               </h3>
-              <p className="text-[#7dbf9e] text-sm leading-relaxed mb-8">
+              <p className="text-[#7dbf9e] leading-relaxed mb-8" style={{ fontSize: "20px" }}>
                 {e.descripcion}
               </p>
 
               <div className="flex items-end justify-between pt-6 border-t border-[#005a3e]">
                 <div>
-                  <p className="text-[#005a3e] text-xs mb-1">desde</p>
-                  <p className="text-[#F0E6D3] font-medium">
+                  <p className="text-[#F0E6D3] font-medium text-xl">
                     ${e.desde}
                     <span className="text-[#7dbf9e] text-sm font-normal"> / hora</span>
                   </p>
                 </div>
-                <a
-                  href="#contacto"
-                  className="text-xs text-[#F0E6D3] hover:underline flex items-center gap-1.5"
-                >
+                <a href="#contacto" className="text-sm text-[#F0E6D3] hover:underline flex items-center gap-1.5">
                   Reservar
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                     <path d="M1 9L9 1M9 1H3M9 1v6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
@@ -100,15 +93,12 @@ export default function Espacios() {
           ))}
         </div>
 
-        {/* Adicionales note */}
         <div className="mt-4 p-5 bg-[#003824] border border-[#005a3e] rounded-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
           <div>
-            <p className="text-[#F0E6D3] text-sm font-medium">Cocina / Baño</p>
-            <p className="text-[#7dbf9e] text-xs mt-0.5">
-              Adicional disponible para complementar cualquier reserva
-            </p>
+            <p className="text-[#F0E6D3] font-medium" style={{ fontSize: "20px" }}>Cocina / Baño</p>
+            <p className="text-[#7dbf9e] text-sm mt-0.5">Adicional disponible para complementar cualquier reserva</p>
           </div>
-          <p className="text-[#F0E6D3] font-medium whitespace-nowrap">
+          <p className="text-[#F0E6D3] font-medium text-xl whitespace-nowrap">
             $46.000 <span className="text-[#7dbf9e] text-sm font-normal">/ hora</span>
           </p>
         </div>
