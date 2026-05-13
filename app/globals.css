@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Dellamor';
+  src: url('/fonts/Dellamor.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-dellamor {
+  font-family: 'Dellamor', serif;
+}
+
 :root {
   --background: #0d0d0b;
   --foreground: #f0ede8;

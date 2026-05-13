@@ -12,7 +12,7 @@ export default function Hero() {
 
         {/* Heading */}
         <h1 className="font-[family-name:var(--font-dm-serif)] text-6xl md:text-8xl lg:text-9xl text-[#372010] leading-[0.92] mb-10">
-          El encuadre perfecto
+          El <span className="font-dellamor">encuadre perfecto</span>
           <br />
           para tu marca.
         </h1>
