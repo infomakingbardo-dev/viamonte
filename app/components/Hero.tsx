@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col justify-end pb-24 px-6 overflow-hidden bg-[#F0E6D3]">
       {/* Background photo */}
       <Image
-        src="/hf_20260526_005718_f5923356-b6b4-48c1-9fde-642613c1e663.png"
+        src="/hero.png"
         alt="Encuadre Studio — salón principal"
         fill
         className="object-cover object-center"
